@@ -19,17 +19,21 @@ int main()
         vec.push_back(temp_int);
     }
     
-    decltype(vec.size()) half_vec_size = vec.size() / 2;
+    decltype(vec.size()) half_vec_size = vec.size() / 2 + 1;
     decltype(vec.size()) vec_size = vec.size();
     decltype(vec.size()) is_odd = vec.size() % 2;
     for (decltype(vec.size()) i = 0; i < half_vec_size; i++)
     {
         cout << vec[i] + vec[vec_size - 1 - i] << " ";
     }
+    //这个题的第二问，更加侧重的是第n个数和倒数第n个数的和，
+    //因此不用考虑序列中元素的奇偶数
+    /**********************************
     if (is_odd == 1)
     {
         cout << vec[half_vec_size];
     }
+    ***********************************/
     cout << endl;
     return 0;
 }
